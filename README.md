@@ -1,4 +1,5 @@
 # PrimaryConstructor
+
 Generate primary constructor from readonly fields
 
 [![NuGet](https://img.shields.io/nuget/v/PrimaryConstructor.svg)](https://www.nuget.org/packages/PrimaryConstructor)
@@ -16,7 +17,7 @@ Visual Studio version 16.8 and above is required as its first version to support
 
 ### Usage
 
-Declare class with `partial`, and annotate with `[PrimaryConstructor]`.  
+Declare class with `partial`, and annotate with `[PrimaryConstructor]`.
 And then you can declare your dependencies with readonly fields.
 
 ```csharp
