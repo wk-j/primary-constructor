@@ -23,13 +23,12 @@ namespace MyWeb {
 
         public void ConfigureServices(IServiceCollection services) {
             services.AddControllers();
-            services.AddSingleton<MyService>();
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MyWeb", Version = "v1" });
             });
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, MyService service) {
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
@@ -41,8 +40,6 @@ namespace MyWeb {
             app.UseEndpoints(endpoints => {
                 endpoints.MapControllers();
             });
-
-            service.Start();
         }
     }
 }

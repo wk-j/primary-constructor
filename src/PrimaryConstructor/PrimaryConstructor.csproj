@@ -1,27 +1,27 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<LangVersion>9.0</LangVersion>
-		<Authors>Chaowlert Chaisrichalermpol</Authors>
-		<!-- <GeneratePackageOnBuild>true</GeneratePackageOnBuild> -->
-		<Description>Generate primary constructor from readonly fields</Description>
-		<Copyright>Copyright (c) Chaowlert Chaisrichalermpol</Copyright>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageProjectUrl>https://github.com/chaowlert/PrimaryConstructor</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/chaowlert/PrimaryConstructor</RepositoryUrl>
-		<PackageTags>source-generator;primary-constructor</PackageTags>
-		<RestoreAdditionalProjectSources>https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet5/nuget/v3/index.json ;$(RestoreAdditionalProjectSources)</RestoreAdditionalProjectSources>
-		<IncludeBuildOutput>false</IncludeBuildOutput>
-		<NoWarn>RCS1197</NoWarn>
-		<PackageId>wk.PrimaryConstructor</PackageId>
-	</PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>9.0</LangVersion>
+        <Authors>Chaowlert Chaisrichalermpol</Authors>
+        <!-- <GeneratePackageOnBuild>true</GeneratePackageOnBuild> -->
+        <Description>Generate primary constructor from readonly fields</Description>
+        <Copyright>Copyright (c) Chaowlert Chaisrichalermpol</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/chaowlert/PrimaryConstructor</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/chaowlert/PrimaryConstructor</RepositoryUrl>
+        <PackageTags>source-generator;primary-constructor</PackageTags>
+        <RestoreAdditionalProjectSources>https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet5/nuget/v3/index.json ;$(RestoreAdditionalProjectSources)</RestoreAdditionalProjectSources>
+        <!-- <IncludeBuildOutput>false</IncludeBuildOutput> -->
+        <NoWarn>RCS1197</NoWarn>
+        <PackageId>wk.PrimaryConstructor</PackageId>
+    </PropertyGroup>
 
-	<ItemGroup>
-		<None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
-	</ItemGroup>
+    <ItemGroup>
+        <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    </ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.8.0" PrivateAssets="all" />
-	</ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.8.0" PrivateAssets="all" />
+    </ItemGroup>
 </Project>
